@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@600&display=swap');
+.container,
+.container-fluid {
+    background-color: #222222;
+}
+
+#im {
+    padding-top: 1.5%;
+    text-align: center;
+}
+
+#im img {
+    border-radius: 10px;
+    height: 450px;
+    width: 350px;
+    object-fit: cover;
+}
+
+table {
+    width: 100%;
+    color: white;
+}
+
+table tr:nth-child(odd) {
+    background: rgba(74, 74, 74, 0.18);
+}
+
+th,
+td {
+    padding: 2%;
+    font-size: 120%;
+}
+
+th {
+    /* color: #34E795; */
+    color: rgb(231, 150, 0);
+    width: 200px;
+}
+
+td {
+    color: white;
+}
+
+#name {
+    background-color: rgb(231, 150, 0);
+    color: black;
+}

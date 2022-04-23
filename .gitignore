@@ -1,10 +1,8 @@
 /__pycache__
-/templates
-/static
-# /templates/404
-# /templates/add_child
-# /templates/alert_description
-# /templates/index
+templates/404.html
+templates/add_child.html
+templates/alert_description.html
+templates/index.html
 
 
 
