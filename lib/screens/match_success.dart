@@ -12,7 +12,6 @@ import 'dart:io';
 class MatchSuccessPage extends StatefulWidget {
   const MatchSuccessPage(
       {Key? key,
-      required this.title,
       required this.image,
       required this.matchedImageBytes,
       required this.name,
@@ -22,7 +21,6 @@ class MatchSuccessPage extends StatefulWidget {
       required this.missingFrom})
       : super(key: key);
   // const ReportSightingPage({Key? key, required this.title, required this.image}) : super(key: key);
-  final String title;
   final XFile image;
   final Uint8List matchedImageBytes;
   final String name;
@@ -41,8 +39,13 @@ class _MatchSuccessPageState extends State<MatchSuccessPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: Color(0xfffbb500),
-        title: Center(child: Text(widget.title)),
+        title: Text(
+          'Match Result',
+          style: TextStyle(
+              fontSize: 24, color: Colors.black54, fontWeight: FontWeight.w800),
+        ),
       ),
       body: Center(
         child: Container(
@@ -54,38 +57,38 @@ class _MatchSuccessPageState extends State<MatchSuccessPage> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Text(
-                "MATCH FOUND!",
+                "BEST MATCH FOUND!",
                 style: TextStyle(
                     color: Color(0xff6af100),
-                    fontSize: 36,
+                    fontSize: 30,
                     fontWeight: FontWeight.bold),
               ),
               Container(
-                // child: Image(
-                //   image: AssetImage('images/child1.jfif'),
-                //   height: 150,
-                // ),
                 child: Image(
-                  image: FileImage(File(widget.image.path)),
-                  height: 150,
-                ),
+                    image: FileImage(File(widget.image.path)),
+                    height: 200,
+                    width: 150),
               ),
               Container(
                 child: Image(
                   image: Image.memory(widget.matchedImageBytes).image,
-                  height: 150,
+                  height: 200,
+                  width: 150,
                 ),
               ),
               ElevatedButton(
                   style: ElevatedButton.styleFrom(
-                    primary: Color(0xff6af100),
-                  ),
+                      textStyle: const TextStyle(fontSize: 20),
+                      padding: const EdgeInsets.fromLTRB(70, 10, 70, 10),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30.0),
+                      ),
+                      primary: Color(0xffE79600)),
                   onPressed: () {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
                             builder: (context) => ChildDetailsPage(
-                                  title: "Report Missing Child",
                                   image: widget.matchedImageBytes,
                                   age: widget.age,
                                   missingDate: widget.missingDate,
@@ -96,8 +99,12 @@ class _MatchSuccessPageState extends State<MatchSuccessPage> {
                   },
                   child: Padding(
                     padding: const EdgeInsets.symmetric(
-                        vertical: 10.0, horizontal: 20),
-                    child: Text("SEE DETAILS", style: TextStyle(fontSize: 24)),
+                        vertical: 10.0, horizontal: 10),
+                    child: Text("SEE DETAILS",
+                        style: TextStyle(
+                            fontSize: 24,
+                            color: Colors.black,
+                            fontWeight: FontWeight.w600)),
                   )),
             ],
           ),

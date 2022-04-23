@@ -18,9 +18,7 @@ Future<dynamic> reportSightingAPI(Map data) async {
   var response = await http.post(Uri.parse('$baseUrl/report_sighting'),
       headers: {
         "Content-Type": "application/json",
-        "Accept": "application/json",
-        "Connection": "keep-alive",
-        "Keep-Alive": "timeout=5, max=1000"
+        "Accept": "application/json"
       },
       body: body);
   // print("${response.statusCode}");

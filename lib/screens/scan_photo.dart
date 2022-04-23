@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:camera/camera.dart';
-import 'package:talash/screens/match_resolver.dart';
-import 'package:talash/screens/report_sighting.dart';
-import 'package:talash/utils/pick_image.dart';
 import 'package:image_picker/image_picker.dart';
-import 'dart:async';
-import 'dart:io';
+import 'package:talash/screens/report_sighting.dart';
+import '../utils/pick_image.dart';
+import 'report_sighting.dart';
 
 class ScanPhotoPage extends StatefulWidget {
-  const ScanPhotoPage({Key? key, required this.title}) : super(key: key);
-  final String title;
+  const ScanPhotoPage({Key? key}) : super(key: key);
 
   @override
   State<ScanPhotoPage> createState() => _ScanPhotoPageState();
@@ -37,7 +34,7 @@ class _ScanPhotoPageState extends State<ScanPhotoPage> {
         setState(() {});
       });
     } else {
-      print("NO any camera found");
+      print("camera NOT found");
     }
   }
 
@@ -45,26 +42,31 @@ class _ScanPhotoPageState extends State<ScanPhotoPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xfffbb500),
-        title: Center(child: Text(widget.title)),
+        centerTitle: true,
+        backgroundColor: Color(0xffE79600),
+        title: Text(
+          'Track Missing Child',
+          style: TextStyle(
+              fontSize: 24, color: Colors.black54, fontWeight: FontWeight.w800),
+        ),
       ),
       body: Center(
         child: Container(
           padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
           height: double.infinity,
           width: double.infinity,
-          color: Color(0xff353535),
+          color: Color(0xff222222),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
               Text(
-                "Capture the photo of the child in the given camera frame",
+                "Image Capture",
                 textAlign: TextAlign.center,
-                style: TextStyle(color: Colors.white, fontSize: 20),
+                style: TextStyle(color: Colors.white, fontSize: 22),
               ),
               Container(
                   height: 300,
-                  width: 400,
+                  width: 300,
                   child: controller == null
                       ? Center(
                           child: Text("Loading Camera...",
@@ -76,6 +78,13 @@ class _ScanPhotoPageState extends State<ScanPhotoPage> {
                             )
                           : CameraPreview(controller!)),
               ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      textStyle: const TextStyle(fontSize: 20),
+                      padding: const EdgeInsets.fromLTRB(70, 10, 70, 10),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30.0),
+                      ),
+                      primary: Color(0xffE79600)),
                   onPressed: () async {
                     try {
                       if (controller != null) {
@@ -93,9 +102,8 @@ class _ScanPhotoPageState extends State<ScanPhotoPage> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => ReportSightingPage(
-                                        title: "Report Missing Child",
-                                        image: image!)));
+                                    builder: (context) =>
+                                        ReportSightingPage(image: image!)));
                           }
                         }
                       }
@@ -103,12 +111,49 @@ class _ScanPhotoPageState extends State<ScanPhotoPage> {
                       print(e); //show error
                     }
                   },
-                  child: Text("Take Photo", style: TextStyle(fontSize: 20))),
-              Text(
-                "OR",
-                style: TextStyle(color: Colors.white, fontSize: 28),
+                  child: Text("Take Photo",
+                      style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.black,
+                          fontWeight: FontWeight.w700))),
+              Center(
+                child: Container(
+                    padding: const EdgeInsets.fromLTRB(45, 0, 20, 0),
+                    alignment: Alignment.center,
+                    child: Row(
+                      children: [
+                        Container(
+                          width: 100,
+                          child: const Divider(
+                            color: Colors.white,
+                            thickness: 1.3,
+                          ),
+                        ),
+                        Container(
+                          padding: const EdgeInsets.fromLTRB(5, 0, 5, 5),
+                          child: const Text(
+                            'OR',
+                            style: TextStyle(fontSize: 24, color: Colors.white),
+                          ),
+                        ),
+                        Container(
+                          width: 100,
+                          child: const Divider(
+                            color: Colors.white,
+                            thickness: 1.3,
+                          ),
+                        ),
+                      ],
+                    )),
               ),
               ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                      textStyle: const TextStyle(fontSize: 20),
+                      padding: const EdgeInsets.fromLTRB(70, 10, 70, 10),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30.0),
+                      ),
+                      primary: Color(0xffE79600)),
                   onPressed: () async {
                     XFile? tmp = await pickImage(ImageSource.gallery);
                     print(tmp);
@@ -119,19 +164,15 @@ class _ScanPhotoPageState extends State<ScanPhotoPage> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => ReportSightingPage(
-                                  title: "Report Missing Child",
-                                  image: image!)));
+                              builder: (context) =>
+                                  ReportSightingPage(image: image!)));
                     }
                   },
-                  child: Text("Upload", style: TextStyle(fontSize: 20))),
-              // image != null
-              //     ? Image(
-              //         image: FileImage(File(image!.path)),
-              //         height: 300,
-              //         width: 400,
-              //       )
-              //     : Container(),
+                  child: Text("Upload",
+                      style: TextStyle(
+                          fontSize: 20,
+                          color: Colors.black,
+                          fontWeight: FontWeight.w700))),
             ],
           ),
         ),

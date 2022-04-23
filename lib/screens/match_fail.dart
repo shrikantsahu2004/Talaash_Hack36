@@ -24,8 +24,13 @@ class _MatchFailPageState extends State<MatchFailPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: Color(0xfffbb500),
-        title: Center(child: Text(widget.title)),
+        title: Text(
+          'Match Result',
+          style: TextStyle(
+              fontSize: 24, color: Colors.black54, fontWeight: FontWeight.w800),
+        ),
       ),
       body: Center(
         child: Container(
@@ -37,17 +42,13 @@ class _MatchFailPageState extends State<MatchFailPage> {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: <Widget>[
               Text(
-                "NO MATCH FOUND",
+                "NO MATCH FOUND!",
                 style: TextStyle(
                     color: Colors.red,
-                    fontSize: 36,
+                    fontSize: 30,
                     fontWeight: FontWeight.bold),
               ),
               Container(
-                // child: Image(
-                //   image: AssetImage('images/child1.jfif'),
-                //   height: 300,
-                // ),
                 child: Image(
                   image: FileImage(File(widget.image!.path)),
                   height: 300,
@@ -58,8 +59,7 @@ class _MatchFailPageState extends State<MatchFailPage> {
                   onPressed: () {
                     Navigator.of(context).pushAndRemoveUntil(
                         MaterialPageRoute(
-                            builder: (context) =>
-                                ScanPhotoPage(title: "Track Missing Child")),
+                            builder: (context) => ScanPhotoPage()),
                         (Route<dynamic> route) => false);
                   },
                   child: Padding(

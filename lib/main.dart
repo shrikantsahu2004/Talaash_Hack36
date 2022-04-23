@@ -1,13 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:talash/screens/match_resolver.dart';
 
 //screens
 import './screens/scan_photo.dart';
-import './screens/report_sighting.dart';
-import './screens/match_fail.dart';
-import './screens/match_success.dart';
-import './screens/child_details.dart';
-import './screens/choose_location.dart';
 
 Future<void> main() async {
   runApp(const MyApp());
@@ -24,12 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const ScanPhotoPage(title: 'Track Missing Child'),
-      // home: const ReportSightingPage(title: 'Track Missing Child'),
-      // home: MatchFailPage(title: 'Track Missing Child'),
-      // home: const MatchSuccessPage(title: 'Track Missing Child'),
-      // home: const ChildDetailsPage(title: 'Track Missing Child'),
-      // home: const ChooseLocationPage(),
+      home: const ScanPhotoPage(),
     );
   }
 }
