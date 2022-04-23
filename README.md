@@ -34,7 +34,7 @@ A Full Fledged (Web+Mobile) Application tracking system which allows citizens to
 
 * [Flutter](https://flutter.dev/) : For Android Application(User)
 * [Flask](https://flask.palletsprojects.com/en/2.1.x/) : For Web Application(Admin)
-* [DeepFace](https://pypi.org/project/deepface/) : For Making our Face Recognition Model
+* [DeepFace](https://pypi.org/project/deepface/) : For our Face Recognition( pre-trained FaceNet512 Model accuracy of 99.45%)
 * [Firebase](https://firebase.google.com/?gclsrc=aw.ds)  : For Database
 * [Google Maps API](https://developers.google.com/maps) : For Reporting Sighted location of unattended Child
 
