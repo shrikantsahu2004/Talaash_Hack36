@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <title>Flask Intro - login page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='../static/css/login.css') }}">
+    <title>Talaash</title>
+</head>
+
+<body>
+    <main class="main">
+        <div class="container">
+            <section class="wrapper">
+                <div class="heading">
+                    <h1 class="text text-large">Login Form</h1>
+                </div>
+                <form name="login" class="form" method="POST" action="">
+                    <div class="input-control">
+                        <label for="email" class="input-label" hidden>Email Address</label>
+                        <input type="email" name="email" value="{{
+                            request.form.email }}" class="input-field" placeholder="Email Address">
+                    </div>
+                    <div class="input-control">
+                        <label for="password" class="input-label" hidden>Password</label>
+                        <input type="password" name="password" value="{{
+                            request.form.password }}" class="input-field" placeholder="Password">
+                    </div>
+                    <div class="input-control">
+                        <input type="submit" name="submit" class="input-submit" value="Login">
+                    </div>
+                </form>
+
+                {% if error %}
+                <p class="error"><strong>Error:</strong> {{ error }}</p>
+                {% endif %}
+
+            </section>
+        </div>
+    </main>
+
+</body>
+
+</html>
