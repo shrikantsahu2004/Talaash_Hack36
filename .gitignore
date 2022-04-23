@@ -1,6 +1,4 @@
 lib/screens/child_details.dart
-lib/screens/match_fail.dart
-lib/screens/match_success.dart
 lib/screens/match_resolver.dart
 
 # Miscellaneous
