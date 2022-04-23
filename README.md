@@ -17,7 +17,7 @@ A Full Fledged (Web+Mobile) Application tracking system which allows citizens to
 
 ### Google Maps used in our App for Sighting Location of missing child:
 
-## Standard Solution being used t:
+## Standard Solution being used:
 * Tracking a missing child using Manual investigation requires both time and experience (to ask right questions). 
 * Most of the time, investigation method is time consuming as well as costly and can be unsuccessful if the person (missing) has been shifted/moved to different location (city/country).
 * In such cases, the ideal approach is to go through CCTV footages and evidences. Again, this can be very time consuming and given the number of children that go missing everyday, it can be a challanage to keep up with it.
