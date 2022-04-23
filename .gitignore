@@ -2,8 +2,6 @@ lib/screens/child_details.dart
 lib/screens/match_fail.dart
 lib/screens/match_success.dart
 lib/screens/match_resolver.dart
-lib/screens/report_sighting.dart
-lib/utils/api.dart
 
 # Miscellaneous
 *.class
