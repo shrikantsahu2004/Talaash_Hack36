@@ -38,7 +38,7 @@ A Full Fledged (Web+Mobile) Application tracking system which allows citizens to
 * [Firebase](https://firebase.google.com/?gclsrc=aw.ds)  : For Database
 * [Google Maps API](https://developers.google.com/maps) : For Reporting Sighted location of unattended Child
 
-Note: This is an incomplete project of our previous hackathon which we intended to complete this time with all the possible functionalities to be explored.
+Note: This was an incomplete project of our previous hackathon which we intended to complete this time with all the possible functionalities to be explored.
 
 ## Contributors (Team Cryptasylum)
 - Shrikant Sahu
