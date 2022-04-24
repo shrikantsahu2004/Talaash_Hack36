@@ -1,6 +1,13 @@
 # MissingChild_Hack36
 
 ### Domain : Tech Against Crime
+<a href="https://hack36.com"> <img src="https://cutt.ly/BuiltAtHack36" height=24px> </a>
+
+### Demo-Video Link:
+https://www.youtube.com/watch?v=y_hZ0diIfIk
+
+### Presention Link:
+https://docs.google.com/presentation/d/1BH5368SmJVZSoQ5jNw46k9nWPUEg7XxuOPj8rof1tQw/edit?usp=sharing
 
 ### Problem Definition: 
 1. Each year millions of children go missing around the globe.
@@ -43,3 +50,6 @@ A Full Fledged (Web+Mobile) Application tracking system which allows citizens to
 - Rishabh Kothari
 - R. Vishal
 - Piyush Sharma
+
+### Made at 
+<a href="https://hack36.com"> <img src="https://cutt.ly/BuiltAtHack36" height=24px> </a>
