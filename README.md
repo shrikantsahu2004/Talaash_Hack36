@@ -46,10 +46,10 @@ A Full Fledged (Web+Mobile) Application tracking system which allows citizens to
 * [Google Maps API](https://developers.google.com/maps) : For Reporting Sighted location of unattended Child
 
 ## Contributors (Team Cryptasylum)
-- Shrikant Sahu
-- Rishabh Kothari
-- R. Vishal
-- Piyush Sharma
+- [Shrikant Sahu](https://github.com/shrikantsahu2004)
+- [Rishabh Kothari](https://github.com/rishabh547)
+- [R. Vishal](https://github.com/vishalr-22)
+- [Piyush Sharma](https://github.com/TigerAtGit)
 
 ### Made at 
 <a href="https://hack36.com"> <img src="https://cutt.ly/BuiltAtHack36" height=24px> </a>
