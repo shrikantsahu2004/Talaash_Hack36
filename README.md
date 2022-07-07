@@ -6,7 +6,7 @@
 ### Demo-Video Link:
 https://www.youtube.com/watch?v=y_hZ0diIfIk
 
-### Presention Link:
+### Presentation Link:
 https://docs.google.com/presentation/d/1BH5368SmJVZSoQ5jNw46k9nWPUEg7XxuOPj8rof1tQw/edit?usp=sharing
 
 ### Problem Definition: 
